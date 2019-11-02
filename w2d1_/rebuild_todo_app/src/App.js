@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+//import './App.css';
+import './styles/style.css';
 import List from './components/List';
 
-export default class App extends Component {
+export class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			term: '',
-			items: []
+			items: [],
+			isEditing: false,
 		};
 	}
 
@@ -24,13 +27,15 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div>
-				<form className="App" onSubmit={this.onSubmit}>
-					<input value={this.state.term} onChange={this.onChange} />
-					<button>Submit</button>
-				</form>
-				<List items={this.state.items} />
-			</div>
+			<section className="frame gutter">
+				<div className="wrapper">
+					<form className="single-form" onSubmit={this.onSubmit}>
+						<input value={this.state.term} onChange={this.onChange} />
+						<button>Submit</button>
+					</form>
+					<List items={this.state.items} />
+				</div>
+			</section>
 		);
 	}
 }
