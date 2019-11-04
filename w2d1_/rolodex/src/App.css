@@ -4,11 +4,11 @@
 |––––––––––––––––––––––––––––––––––––––––––––––––––
 */
 
-@import "./settings.css";
-@import "./body.css";
-@import "./type.css";
-@import "./buttons.css";
-@import "./forms.css";
-@import "./utility.css";
-@import "./layout.css";
-@import "./single-form.css";
+@import "./styles/settings.css";
+@import "./styles/body.css";
+@import "./styles/type.css";
+@import "./styles/buttons.css";
+@import "./styles/forms.css";
+@import "./styles/utility.css";
+@import "./styles/layout.css";
+@import "./styles/single-form.css";

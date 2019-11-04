@@ -49,15 +49,21 @@ input[type=submit]:not([class]) {
 			user-select: none;
 	cursor: pointer;
 }
-.btn:hover, .btn:focus,
-.button:hover, .button:focus,
-button:not([class]):hover, button:not([class]):focus,
-input[type=submit]:not([class]):hover, input[type=submit]:not([class]):focus {
+
+.btn:hover, 
+.btn:focus,
+.button:hover, 
+.button:focus,
+button:not([class]):hover, 
+button:not([class]):focus,
+input[type=submit]:not([class]):hover, 
+input[type=submit]:not([class]):focus {
 	outline: none;
 	border-color: var(--link_hover);
 	background-color: var(--link_hover);
 	color: white;
 }
+
 .btn[disabled],
 .button[disabled],
 button:not([class])[disabled],
@@ -65,10 +71,15 @@ input[type=submit]:not([class])[disabled] {
 	opacity: 0.8;
 	cursor: not-allowed;
 }
-.btn[disabled]:hover, .btn[disabled]:focus,
-.button[disabled]:hover, .button[disabled]:focus,
-button:not([class])[disabled]:hover, button:not([class])[disabled]:focus,
-input[type=submit]:not([class])[disabled]:hover, input[type=submit]:not([class])[disabled]:focus {
+
+.btn[disabled]:hover, 
+.btn[disabled]:focus,
+.button[disabled]:hover, 
+.button[disabled]:focus,
+button:not([class])[disabled]:hover, 
+button:not([class])[disabled]:focus,
+input[type=submit]:not([class])[disabled]:hover, 
+input[type=submit]:not([class])[disabled]:focus {
 	outline: none;
 	border-color: var(--link_color);
 	background-color: var(--link_color);

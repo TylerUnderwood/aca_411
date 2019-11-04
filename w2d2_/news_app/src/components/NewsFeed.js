@@ -45,27 +45,39 @@ export class NewsFeed extends Component {
 	getSearchByTerm = ( searchValue ) => {
 		fetch(`http://hn.algolia.com/api/v1/search?query=${ searchValue }`)
 			.then( res => res.json() )
-			.then( parsedJSON => {
-				// console.log(parsedJSON)
-				this.setState({news: parsedJSON.hits}) 
+			.then( data => {
+				// console.log(data)
+				if ( data.hits.length === 0) {
+					this.setState({news: [{title:"Sorry no hits found",author:"null",created_at:"null"}]})
+				} else {
+					this.setState({news: data.hits})
+				}
 			})
 			.catch( error => this.errorMsg = error)
 	};
 	getSearchByAuthor = ( searchValue ) => {
 		fetch(`http://hn.algolia.com/api/v1/search?tags=author_${ searchValue }`)
 			.then( res => res.json() )
-			.then( parsedJSON => {
-				// console.log(parsedJSON)
-				this.setState({news: parsedJSON.hits}) 
+			.then( data => {
+				// console.log(data)
+				if ( data.hits.length === 0) {
+					this.setState({news: [{title:"Sorry no hits found",author:"null",created_at:"null"}]})
+				} else {
+					this.setState({news: data.hits})
+				}
 			})
 			.catch( error => this.errorMsg = error)
 	};
 	getSearchByDate = ( searchValue ) => {
 		fetch(`http://hn.algolia.com/api/v1/search_by_date?query=${ searchValue }`)
 			.then( res => res.json() )
-			.then( parsedJSON => {
-				// console.log(parsedJSON)
-				this.setState({news: parsedJSON.hits}) 
+			.then( data => {
+				// console.log(data)
+				if ( data.hits.length === 0) {
+					this.setState({news: [{title:"Sorry no hits found",author:"null",created_at:"null"}]})
+				} else {
+					this.setState({news: data.hits})
+				}
 			})
 			.catch( error => this.errorMsg = error)
 	};

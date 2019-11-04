@@ -34,12 +34,12 @@ form.single-form input {
 		flex-direction: column;
 	}
 	form.single-form button {
-		margin-top: 1rem;
+		margin-top: 0.8rem;
 	}
 }
 
 @media (min-width: 480px) {
 	form.single-form button {
-		margin-left: 1rem;
+		margin-left: 0.8rem;
 	}
 }
