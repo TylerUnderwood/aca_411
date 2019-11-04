@@ -5,7 +5,6 @@ export class Rolodex extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			term: '',
 			errorMsg: '',
 			users: [],
 		};
@@ -20,15 +19,11 @@ export class Rolodex extends Component {
 			.catch( error => this.errorMsg = error)
 	}
 
-	onSearch = ( event ) => {
-		event.preventDefault()
-		this.getSearchResults()
-	}
-
 	render() { return (
 		<div className="rolodex">
-			<div className="m-b"><h2>Rolodex</h2></div>
-			<button onClick={(e) => this.onSearch(e)}>Search</button>
+			<h2 className="m-b">Rolodex</h2>
+			<h6 className="m-b">Get twenty five random people</h6>
+			<button onClick={(e) => this.getSearchResults(e)}>Search</button>
 			<ul className="frame-top">
 			{this.state.users.map(( users, index ) => { return (
 				<li className="m-t user-card" key={index+1}>

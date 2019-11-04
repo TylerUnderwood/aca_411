@@ -7,3 +7,7 @@
 .user-card {
 	display: flex;
 }
+
+.user-card h4 {
+	display: inline-block;
+}
