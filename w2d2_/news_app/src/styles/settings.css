@@ -17,6 +17,9 @@
 
 :root {
 	--font_family: 'Roboto', sans-serif;
+	--font_size_lg: 1.2rem;
+	--font_size: 1.0rem;
+	--font_size_sm: 0.8rem;
 	--font_color: #333;
 	--font_color_light: #B8C8CA;
 	--heading_color: #201E31;

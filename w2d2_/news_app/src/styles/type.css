@@ -14,7 +14,7 @@ h3 { font-size: 2.4rem; }
 
 /* sub headings */
 h4, h5, h6 {
-	font-size: 1.2rem;
+	font-size: var(--font_size_lg);
 }
 h4 { color: var(--heading_color); }
 h5 { color: var(--heading_color_alt); }
@@ -29,14 +29,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* first heading in an element */
-h1:first-child, h2:first-child, h3:first-child, 
-h4:first-child, h5:first-child, h6:first-child {
+h1:first-child, 
+h2:first-child, 
+h3:first-child, 
+h4:first-child, 
+h5:first-child, 
+h6:first-child {
 	margin-top: -0.24em;
 }
 
 /* last heading in an element */
-h1:last-child, h2:last-child, h3:last-child, 
-h4:last-child, h5:last-child, h6:last-child {
+h1:last-child, 
+h2:last-child, 
+h3:last-child, 
+h4:last-child, 
+h5:last-child, 
+h6:last-child {
 	margin-bottom: -0.2em;
 }
 
@@ -59,7 +67,7 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 /* horizontal rule */
 hr {
 	clear: both;
-	margin: 1.6rem 0;
+	margin: var(--space) 0;
 	border: unset;
 	border-top: 1px solid currentColor;
 	border-bottom: 1px solid currentColor;
@@ -71,10 +79,10 @@ hr + * {
 
 /* paragraph */
 p {
-	margin: 1.6rem 0 0;
+	margin: var(--space) 0 0;
 	max-width: var(--text_wrapper);
 	line-height: 1.6;
-	font-size: 1rem;
+	font-size: var(--font_size);
 	-webkit-hyphens: none;
 		-ms-hyphens: none;
 			hyphens: none;
@@ -95,7 +103,7 @@ ul, ul li {
 
 li {
 	line-height: 1.4;
-	font-size: 1rem;
+	font-size: var(--font_size);
 }
 li:first-child {
 	margin-top: 0;
@@ -109,11 +117,11 @@ blockquote {
 	margin: 0;
 	padding: 0;
 	line-height: 1.6;
-	font-size: 1.2rem;
+	font-size: var(--font_size_lg);
 }
 
 cite, label, small {
-	font-size: 0.8rem;
+	font-size: var(--font_size_sm);
 }
 
 code {
