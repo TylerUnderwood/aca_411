@@ -82,8 +82,8 @@ export class NewsFeed extends Component {
 			.catch( error => this.errorMsg = error)
 	};
 
-	render() {
-		return (<>
+	render() { return (
+		<div className="news-feed">
 			<h2>The News</h2>
 			<div className="frame">
 				<h6>Search by headline</h6>
@@ -115,21 +115,19 @@ export class NewsFeed extends Component {
 				</form>
 			</div>
 			<ul>
-				{this.state.news.map(( news, index ) => {
-					return (
-						<li className="m-t" key={index+1}>
-							<a className="heading" href={news.url} target="_blank" rel="noopener noreferrer">
-								<h4>{news.title}</h4>
-								<cite>{news.author}</cite>
-								<span className="divider">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-								<small className="date">{news.created_at}</small>
-							</a>
-						</li>
-					)
-				})}
+			{this.state.news.map(( news, index ) => (
+				<li className="m-t" key={index+1}>
+					<a className="heading" href={news.url} target="_blank" rel="noopener noreferrer">
+						<h4>{news.title}</h4>
+						<cite>{news.author}</cite>
+						<span className="divider">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<small className="date">{news.created_at}</small>
+					</a>
+				</li>
+			))}
 			</ul>
-		</>)
-	}
+		</div>
+	)}
 }
 
 export default NewsFeed
