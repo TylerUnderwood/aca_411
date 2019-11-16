@@ -134,7 +134,8 @@ body.modal-opening {
 	cursor: pointer;
 }
 
-.modal, .modal-wrapper::after {
+.modal,
+.modal-wrapper::after {
 	vertical-align: middle;
 }
 
@@ -146,6 +147,7 @@ body.modal-opening {
 	max-width: 100%;
 	box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.2);
 	background-color: #ffffff;
+	cursor: default;
 }
 .modal-closed > .modal {
 	visibility: hidden;
@@ -182,13 +184,14 @@ body.modal-opening {
 	width: 1.5em;
 	height: 1.5em;
 	background-color: #ffffff;
-	line-height: 1.5em;
+	line-height: 1.4em;
 	font-size: 24px;
 	color: #c0c0c0;
 	content: "\D7";
 	transition: color 200ms ease-in-out, background 200ms ease-in-out;
 }
-.modal-close-button:hover::after, .modal-close-button:focus::after {
+.modal-close-button:hover::after,
+.modal-close-button:focus::after {
 	background-color: #f7e388;
 	color: #555555;
 }
