@@ -21,10 +21,6 @@ export class NewsFeed extends Component {
 		this.setState({
 			[name]: value
 		});
-
-		// this.setState({
-		// 	[event.target.name]: value
-		// });
 	}
 
   	onTermSubmit = ( event ) => {
