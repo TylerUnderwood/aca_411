@@ -1,8 +1,8 @@
 export default {
     user: {
-        username: 'theUser',
+        username: 'superAdminSupremeLeaderOfAllThatLives',
 		email: 'user@website.com',
-		loggedIn: false
+		loggedIn: false,
     },
     business: [
 		{

@@ -1,7 +1,14 @@
 
-export const addCar = ( car ) => {
+export const login = ( ) => {
     return {
-        type: 'ADD_CAR',
-        value: car
+        type: 'LOGIN',
+        value: true
+    }
+}
+
+export const logout = ( ) => {
+    return {
+        type: 'LOGOUT',
+        value: false
     }
 }

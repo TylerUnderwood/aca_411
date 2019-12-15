@@ -7,9 +7,10 @@ import {
 } from '@material-ui/core'
 
 class App extends Component {
+
 	state = {
-		username: '',
-		password: ''
+		username: 'OlGreg',
+		password: 'MotherLicker',
 	}
 
 	handleTextChange = ( event ) => {
@@ -20,7 +21,7 @@ class App extends Component {
 
 	login = ( event ) => {
 		event.preventDefault()
-		document.cookie = "loggedIn=true;max-age=60*1000"
+		document.cookie = `${this.state.username}_loggedIn=true;max-age=60*1000`
 		window.location.replace("/listings")
 	}
 

@@ -8,8 +8,8 @@ import {
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 
-const Navigation = () => {
-	let loggedIn = false
+const Navigation = ( props ) => {
+	
     return (
         <AppBar position="relative">
             <Toolbar>
@@ -20,12 +20,12 @@ const Navigation = () => {
 					<li className="nav-list-item">
                         <Link to="/listings">Listings</Link>
                     </li>
-					{ loggedIn && (
+					{ props.user.loggedIn && (
 						<li className="nav-list-item">
 							<Link to="/listings/add">Add</Link>
 						</li>
 					)}
-					{ loggedIn ? (
+					{ props.user.loggedIn ? (
 						<li className="nav-list-item">
 							<Link to="/login">LOGOUT</Link>
 						</li>
@@ -39,7 +39,7 @@ const Navigation = () => {
                     <MenuIcon />
                 </IconButton>
             </Toolbar>
-			{ !loggedIn && (
+			{ props.user.loggedIn && (
 				<div className="logged-in-bar">
 					<span>User Name Here</span>
 				</div>
