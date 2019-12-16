@@ -1,7 +1,6 @@
 export default {
     user: {
         username: 'superAdminSupremeLeaderOfAllThatLives',
-		email: 'user@website.com',
 		loggedIn: false,
     },
     business: [
