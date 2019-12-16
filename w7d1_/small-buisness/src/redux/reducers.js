@@ -4,14 +4,23 @@ import initialState from '../redux/state';
 const user = ( state = null ) => state
 
 const login = ( state = initialState, action ) => {
-	console.log(state.user)
+
+	const updatedUser = state.user
+	console.log(updatedUser)
+
     switch(action.type) {
         case 'LOGIN':
-			state.user.loggedIn = action.value
-            return state
+			updatedUser.loggedIn = action.value
+            return {
+				...state,
+				user: updatedUser
+			}
         case 'LOGOUT':
-			state.user.loggedIn = action.value
-            return state
+			updatedUser.loggedIn = action.value
+			return {
+				...state,
+				user: updatedUser
+			}
         default:
             return state
     }
