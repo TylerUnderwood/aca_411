@@ -5,7 +5,6 @@ import { logout } from '../redux/actions'
 
 const mapStateToProps = ( state ) => {
     return {
-		loggedIn: state.loggedIn,
 		user: state.user,
     }
 }

@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-// import { Redirect } from 'react-router'
 import {
 	TextField,
 	Button,
 	Container
 } from '@material-ui/core'
 
-class App extends Component {
+class Login extends Component {
 
 	state = {
 		username: 'OlGreg',
@@ -21,6 +20,9 @@ class App extends Component {
 
 	login = ( event ) => {
 		event.preventDefault()
+		//console.log(this.props.login())
+        this.props.login()
+
 		document.cookie = `${this.state.username}_loggedIn=true;max-age=60*1000`
 		window.location.replace("/listings")
 	}
@@ -54,4 +56,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default Login;

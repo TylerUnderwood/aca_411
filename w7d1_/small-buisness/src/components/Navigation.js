@@ -9,7 +9,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 
 const Navigation = ( props ) => {
-	
+	// console.log(props.user)
     return (
         <AppBar position="relative">
             <Toolbar>
@@ -41,7 +41,7 @@ const Navigation = ( props ) => {
             </Toolbar>
 			{ props.user.loggedIn && (
 				<div className="logged-in-bar">
-					<span>User Name Here</span>
+					<span>{props.user.username}</span>
 				</div>
 			)}
         </AppBar>

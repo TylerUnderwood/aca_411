@@ -2,7 +2,7 @@ import React from 'react'
 // import { Link } from 'react-router-dom'
 import { 
 	Container,
-	Typography,
+	// Typography,
 	Table,
     TableBody,
     TableCell,
@@ -13,6 +13,7 @@ import DeleteIcon from '@material-ui/icons/Delete'
 
 
 const ListingsTable = ( props ) => {
+	
     return (
 		<Container maxWidth="md">
 			<Table>
@@ -39,7 +40,7 @@ const ListingsTable = ( props ) => {
 							{listing["description"]}
 						</TableCell>
                         <TableCell>
-							{listing["openHours"]}
+							{listing["hours"]}
 						</TableCell>
                         <TableCell>
 							{listing["address"]}
