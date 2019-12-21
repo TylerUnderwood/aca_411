@@ -5,7 +5,7 @@ import { login } from '../redux/actions'
 
 const mapDispatchToProps = ( dispatch ) => {
     return {
-        login: ( ) => dispatch( login( ) )
+        login: ( username ) => dispatch( login( username ) )
     }
 }
 

@@ -5,14 +5,14 @@ import { logout } from '../redux/actions'
 
 const mapStateToProps = ( state ) => {
     return {
-		user: state.user,
+        user: state.user,
     }
 }
 
 
 const mapDispatchToProps = ( dispatch ) => {
     return {
-        logout: ( ) => dispatch( logout( ) )
+        logout: () => dispatch( logout() )
     }
 }
 

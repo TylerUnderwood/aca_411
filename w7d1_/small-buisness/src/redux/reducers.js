@@ -1,25 +1,29 @@
 import { combineReducers } from 'redux'
 import initialState from '../redux/state';
 
-const user = ( state = null ) => state
+const user = ( state = initialState, action ) => {
 
-const login = ( state = initialState, action ) => {
-
-	const updatedUser = state.user
-	console.log(updatedUser)
+	const updatedUser = { }
+	// console.log(updatedUser, 'pre update')
+	// console.log(state, 'reducers')
 
     switch(action.type) {
         case 'LOGIN':
-			updatedUser.loggedIn = action.value
+			updatedUser.username = action.value
+			updatedUser.loggedIn = true
+			// console.log(updatedUser, 'post update')
             return {
 				...state,
-				user: updatedUser
+				username: updatedUser.username,
+				loggedIn: updatedUser.loggedIn
 			}
         case 'LOGOUT':
-			updatedUser.loggedIn = action.value
+			updatedUser.username = action.value
+			updatedUser.loggedIn = false
 			return {
 				...state,
-				user: updatedUser
+				username: updatedUser.username,
+				loggedIn: updatedUser.loggedIn
 			}
         default:
             return state
@@ -39,4 +43,4 @@ const business = ( state = [], action ) => {
     }
 }
 
-export default combineReducers({ user, login, business })
+export default combineReducers({ user, business })

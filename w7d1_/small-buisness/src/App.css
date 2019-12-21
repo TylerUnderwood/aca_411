@@ -33,6 +33,10 @@ ul {
 	color: gray
 }
 
+.text-red {
+	color: red;
+}
+
 .nav-list {
 	list-style: none;
 	display: flex;
@@ -44,4 +48,10 @@ ul {
 
 .nav-list-item:hover {
 	cursor: pointer;
+}
+
+.logged-in-bar {
+	background-color: gainsboro;
+	padding: 0.2rem 1rem;
+	color: #333;
 }

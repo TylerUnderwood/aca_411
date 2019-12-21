@@ -20,11 +20,11 @@ class Login extends Component {
 
 	login = ( event ) => {
 		event.preventDefault()
-		//console.log(this.props.login())
-        this.props.login()
-
-		document.cookie = `${this.state.username}_loggedIn=true;max-age=60*1000`
-		window.location.replace("/listings")
+		
+		this.props.login( this.state.username )
+		
+		// document.cookie = `${this.state.username}_loggedIn=true;max-age=60*1000`
+		this.props.history.push('/listings')
 	}
 
 	render() {

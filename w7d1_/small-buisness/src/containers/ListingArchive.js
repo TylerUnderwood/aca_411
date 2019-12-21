@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ListingArchive from '../components/ListingArchive'
-// import { removeCar } from '../redux/actions'
+import { removeListing } from '../redux/actions'
 
 const mapStateToProps = ( state ) => {
     return {
@@ -9,10 +9,10 @@ const mapStateToProps = ( state ) => {
     }
 }
 
-// add mapDispatchToProps function here
+
 const mapDispatchToProps = ( dispatch ) => {
     return {
-        // removeCar: (index) => dispatch(removeCar(index))
+        removeListing: ( index ) => dispatch( removeListing( index ) )
     }
 }
 
