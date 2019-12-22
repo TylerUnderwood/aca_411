@@ -4,8 +4,8 @@ import cookie from 'cookie'
 import Home from './components/Home'
 import Login from './containers/Login'
 import ListingArchive from './containers/ListingArchive'
-import ListingEntry from './components/ListingEntry'
-import ListingAdd from './components/ListingAdd'
+import ListingEntry from './containers/ListingEntry'
+import ListingAdd from './containers/ListingAdd'
 
 
 const checkAuth = () => {
@@ -31,8 +31,8 @@ const Router = () => {
         <Switch>
             <Route exact path="/" component={Home} />
 			<Route path="/listings" component={ListingArchive} />
-			<Route path="/listings/:id" component={ListingEntry} />
-            <ProtectedRoute path="/listings/add" component={ListingAdd} />
+			<Route path="/listing/:id" component={ListingEntry} />
+            <ProtectedRoute path="/add-listing" component={ListingAdd} />
 			<Route path="/login" component={Login} />
         </Switch>
     );

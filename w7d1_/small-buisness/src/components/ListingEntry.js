@@ -1,18 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { 
-	Container,
-	Typography,
-} from '@material-ui/core'
+	Container, 
+	Paper,
+} from '@material-ui/core';
 
 
-const Listing = () => {
+const ListingEntry = ( props ) => {
+
+	const id = props.match.params.id
+	const listing = props.business.find( item => item.id == id )
+	
     return (
-		<Container maxWidth="sm">
-			<Typography variant="h3">Listing</Typography>
-			<Link to={`/`}>Home</Link>
-		</Container>
+		<Container maxWidth="sm" className="listing-container pad">
+            <Paper className="listing-paper pad">
+                <h2>{listing.name}</h2>
+				<address>{listing.address}</address>
+				<span>{listing.hours}</span>
+				<p>{listing.description}</p>
+            </Paper>
+        </Container>
     )
 }
 
-export default Listing
+export default ListingEntry

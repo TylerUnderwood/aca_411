@@ -15,7 +15,7 @@ class Navigation extends Component {
 
 		if ( confirmation ) {
 			this.props.logout()
-			document.cookie = ``
+			document.cookie = "loggedIn="
 		}
 	}
 
@@ -32,7 +32,7 @@ class Navigation extends Component {
 						</li>
 						{ this.props.user.loggedIn && (
 							<li className="nav-list-item">
-								<Link to="/listings/add">Add</Link>
+								<Link to="/add-listing">Add</Link>
 							</li>
 						)}
 						{ this.props.user.loggedIn ? (

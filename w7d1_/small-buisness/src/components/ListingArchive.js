@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { 
 	Container,
 	Table,
@@ -41,7 +42,7 @@ class ListingsTable extends Component {
 								{listing.id}
 							</TableCell>
 							<TableCell>
-								{listing["name"]}
+								<Link to={`/listing/${listing.id}`}>{listing["name"]}</Link>
 							</TableCell>
 							<TableCell>
 								{listing["description"]}
