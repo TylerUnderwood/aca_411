@@ -7,12 +7,30 @@ import {
 class ListingAdd extends Component {
 
 	state = {
-		// open: false,
+		open: false,
 		id: '',
 		name: '',
 		description: '',
 		hours: '',
 		address: '',
+	}
+
+	stringToSlug = ( str ) => {
+		str = str.replace(/^\s+|\s+$/g, ''); // trim
+		str = str.toLowerCase();
+	  
+		// remove accents, swap ñ for n, etc
+		var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+		var to   = "aaaaeeeeiiiioooouuuunc------";
+		for (var i=0, l=from.length ; i<l ; i++) {
+			str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+		}
+	
+		str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+			.replace(/\s+/g, '-') // collapse whitespace and replace by -
+			.replace(/-+/g, '-'); // collapse dashes
+	
+		return str;
 	}
 
 	toggleDialog = () => this.setState({ open: !this.state.open })
@@ -26,7 +44,7 @@ class ListingAdd extends Component {
 	handleSubmit = ( event ) => {
 		event.preventDefault()
 		const payload = { ...this.state }
-		payload.id = this.props.business.length + 1
+		payload.id = this.stringToSlug( this.state.name )
 		delete payload.open
 		this.props.addListing( payload )
 		this.setState({ open: false })

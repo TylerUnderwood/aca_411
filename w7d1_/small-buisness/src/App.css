@@ -20,10 +20,10 @@
 	margin: 25px;
 }
 
-a {
+/* a {
 	text-decoration: none;
 	color: inherit;
-}
+} */
 
 ul {
 	padding-inline-start: 20px;
@@ -37,6 +37,11 @@ ul {
 	color: red;
 }
 
+.nav-logo a {
+	text-decoration: none;
+	color: inherit;
+}
+
 .nav-list {
 	list-style: none;
 	display: flex;
@@ -44,6 +49,11 @@ ul {
 
 .nav-list-item {
 	margin: auto 20px;
+}
+
+.nav-list-item a {
+	text-decoration: none;
+	color: inherit;
 }
 
 .nav-list-item:hover {

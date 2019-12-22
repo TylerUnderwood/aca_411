@@ -23,7 +23,7 @@ class Navigation extends Component {
 		return (
 			<AppBar position="relative">
 				<Toolbar>
-					<Typography variant="h6" style={{ flexGrow: "1" }}>
+					<Typography variant="h6" style={{ flexGrow: "1" }} className="nav-logo">
 						<Link to="/">Austin Small Business</Link>
 					</Typography>
 					<ul className="nav-list">
